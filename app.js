@@ -1,3 +1,9 @@
+/**
+ author: Prasert Kanawattanachai
+ email: prasert.k@chula.ac.th
+ last updated: 20-Nov-2021
+*/
+
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -12,27 +18,8 @@ app.get('/', (req, res) => {
 });
 
 /**
- * แปลงข้อความเป็นภาษาไทย
- * @example
- *  /th/life is beautify
+ * แปลงข้อความ (text) เป็นภาษาที่ต้องการ (lang)
  */
-// app.get('/th/:text', async (req, res) => {
-//   let x = await translate(req.params.text, { to: 'th' });
-//   // console.log(x);
-//   res.send(x);
-// });
-
-/**
- * แปลงข้อความเป็นภาษาอังกฤษ
- * @example
- *  /th/life is beautify
- */
-// app.get('/en/:text', async (req, res) => {
-//   let x = await translate(req.params.text, { to: 'en' });
-//   // console.log(x);
-//   res.send(x);
-// });
-
 app.get('/:lang/:text', async (req, res) => {
   let x = await translate(req.params.text, { to: req.params.lang });
   // console.log(x);
