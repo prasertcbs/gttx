@@ -11,24 +11,253 @@
         font-weight: bold;
       }
       .result {
-        color: #733B2F;
+        color: #733b2f;
       }
     </style>
   </head>
   <body>
-    <h1>A simple Webservice for Excel and Google Sheets</h1>
+    <h1>A simple Webservice for language translation</h1>
     <pre>
-      <code class="usage">https://dollartext.herokuapp.com/en/123</code> returns <code class="result">One Hundred Twenty Three Dollars Only</code>
-      <code class="usage">https://dollartext.herokuapp.com/en/123?currency=false</code> returns <code class="result">One Hundred Twenty Three</code>
-      <code class="usage">https://dollartext.herokuapp.com/th/123</code> returns <code class="result">หนึ่งร้อยยี่สิบสามบาทถ้วน</code>
-      <code class="usage">https://dollartext.herokuapp.com/area/956</code> returns <code class="result">2-1-56</code>
-      <code class="usage">https://dollartext.herokuapp.com/bmi?weight=70&height=170</code> returns <code class="result">24.221453287197235</code>
+      <code class="usage">https://gttx.herokuapp.com/th/life is beautiful</code>
+      <code class="usage">https://gttx.herokuapp.com/it/life is beautiful</code>
+      <code class="usage">https://gttx.herokuapp.com/it/ชีวิตสวยงาม</code>
     </pre>
     <hr />
-    <h2>Excel</h2>
-    <code class="usage">=WEBSERVICE("https://dollartext.herokuapp.com/en/123")</code>
-    <hr />
-    <h2>Google Sheets</h2>
-    <code class="usage">=IMPORTDATA("https://dollartext.herokuapp.com/en/123")</code>
+    <h2>Language code</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Code</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Amharic</td>
+          <td>am</td>
+        </tr>
+        <tr>
+          <td>Arabic</td>
+          <td>ar</td>
+        </tr>
+        <tr>
+          <td>Basque</td>
+          <td>eu</td>
+        </tr>
+        <tr>
+          <td>Bengali</td>
+          <td>bn</td>
+        </tr>
+        <tr>
+          <td>English (UK)</td>
+          <td>en-GB</td>
+        </tr>
+        <tr>
+          <td>Portuguese (Brazil)</td>
+          <td>pt-BR</td>
+        </tr>
+        <tr>
+          <td>Bulgarian</td>
+          <td>bg</td>
+        </tr>
+        <tr>
+          <td>Catalan</td>
+          <td>ca</td>
+        </tr>
+        <tr>
+          <td>Cherokee</td>
+          <td>chr</td>
+        </tr>
+        <tr>
+          <td>Croatian</td>
+          <td>hr</td>
+        </tr>
+        <tr>
+          <td>Czech</td>
+          <td>cs</td>
+        </tr>
+        <tr>
+          <td>Danish</td>
+          <td>da</td>
+        </tr>
+        <tr>
+          <td>Dutch</td>
+          <td>nl</td>
+        </tr>
+        <tr>
+          <td>English (US)</td>
+          <td>en</td>
+        </tr>
+        <tr>
+          <td>Estonian</td>
+          <td>et</td>
+        </tr>
+        <tr>
+          <td>Filipino</td>
+          <td>fil</td>
+        </tr>
+        <tr>
+          <td>Finnish</td>
+          <td>fi</td>
+        </tr>
+        <tr>
+          <td>French</td>
+          <td>fr</td>
+        </tr>
+        <tr>
+          <td>German</td>
+          <td>de</td>
+        </tr>
+        <tr>
+          <td>Greek</td>
+          <td>el</td>
+        </tr>
+        <tr>
+          <td>Gujarati</td>
+          <td>gu</td>
+        </tr>
+        <tr>
+          <td>Hebrew</td>
+          <td>iw</td>
+        </tr>
+        <tr>
+          <td>Hindi</td>
+          <td>hi</td>
+        </tr>
+        <tr>
+          <td>Hungarian</td>
+          <td>hu</td>
+        </tr>
+        <tr>
+          <td>Icelandic</td>
+          <td>is</td>
+        </tr>
+        <tr>
+          <td>Indonesian</td>
+          <td>id</td>
+        </tr>
+        <tr>
+          <td>Italian</td>
+          <td>it</td>
+        </tr>
+        <tr>
+          <td>Japanese</td>
+          <td>ja</td>
+        </tr>
+        <tr>
+          <td>Kannada</td>
+          <td>kn</td>
+        </tr>
+        <tr>
+          <td>Korean</td>
+          <td>ko</td>
+        </tr>
+        <tr>
+          <td>Latvian</td>
+          <td>lv</td>
+        </tr>
+        <tr>
+          <td>Lithuanian</td>
+          <td>lt</td>
+        </tr>
+        <tr>
+          <td>Malay</td>
+          <td>ms</td>
+        </tr>
+        <tr>
+          <td>Malayalam</td>
+          <td>ml</td>
+        </tr>
+        <tr>
+          <td>Marathi</td>
+          <td>mr</td>
+        </tr>
+        <tr>
+          <td>Norwegian</td>
+          <td>no</td>
+        </tr>
+        <tr>
+          <td>Polish</td>
+          <td>pl</td>
+        </tr>
+        <tr>
+          <td>Portuguese (Portugal)</td>
+          <td>pt-PT</td>
+        </tr>
+        <tr>
+          <td>Romanian</td>
+          <td>ro</td>
+        </tr>
+        <tr>
+          <td>Russian</td>
+          <td>ru</td>
+        </tr>
+        <tr>
+          <td>Serbian</td>
+          <td>sr</td>
+        </tr>
+        <tr>
+          <td>Chinese (PRC)</td>
+          <td>zh-CN</td>
+        </tr>
+        <tr>
+          <td>Slovak</td>
+          <td>sk</td>
+        </tr>
+        <tr>
+          <td>Slovenian</td>
+          <td>sl</td>
+        </tr>
+        <tr>
+          <td>Spanish</td>
+          <td>es</td>
+        </tr>
+        <tr>
+          <td>Swahili</td>
+          <td>sw</td>
+        </tr>
+        <tr>
+          <td>Swedish</td>
+          <td>sv</td>
+        </tr>
+        <tr>
+          <td>Tamil</td>
+          <td>ta</td>
+        </tr>
+        <tr>
+          <td>Telugu</td>
+          <td>te</td>
+        </tr>
+        <tr>
+          <td>Thai</td>
+          <td>th</td>
+        </tr>
+        <tr>
+          <td>Chinese (Taiwan)</td>
+          <td>zh-TW</td>
+        </tr>
+        <tr>
+          <td>Turkish</td>
+          <td>tr</td>
+        </tr>
+        <tr>
+          <td>Urdu</td>
+          <td>ur</td>
+        </tr>
+        <tr>
+          <td>Ukrainian</td>
+          <td>uk</td>
+        </tr>
+        <tr>
+          <td>Vietnamese</td>
+          <td>vi</td>
+        </tr>
+        <tr>
+          <td>Welsh</td>
+          <td>cy</td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>
