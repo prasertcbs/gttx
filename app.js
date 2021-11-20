@@ -7,8 +7,8 @@ const translate = require('translate-google');
 
 app.get('/', (req, res) => {
   // res.send('Webservice for Excel by @prasertcbs');
-  //   res.sendFile(path.join(__dirname, '/about.html'));
-  res.send('translate');
+    res.sendFile(path.join(__dirname, '/about.html'));
+//   res.send('translate');
 });
 
 /**
